@@ -5,6 +5,9 @@
   "repository": "git@github.com:franSborges/Delivery_backend_application.git",
   "author": "borgesfran497@gmail.com <team@fastcode.com.br>",
   "license": "MIT",
+  "scripts": {
+    "dev": "ts-node-dev --exit-child --transpile-only --ignore-watch node_modules src/server.ts"
+  },
   "dependencies": {
     "@prisma/client": "^4.2.1",
     "bcrypt": "^5.0.1",
