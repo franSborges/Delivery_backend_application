@@ -5,7 +5,6 @@ interface ICreateClient {
   username: string;
   password: string;
 }
-
 export class CreateClientUseCase {
   async execute ({username, password}: ICreateClient) {
   const clientExists = await prisma.clients.findFirst({
@@ -15,7 +14,6 @@ export class CreateClientUseCase {
       }
     }
   });
-
   if(clientExists) throw new Error("Client already exists");
 
   const hashPassword = await hash(password, 10);
